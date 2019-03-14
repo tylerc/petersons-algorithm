@@ -25,8 +25,8 @@ Why not?:
    closures you've created that are responding to events Node.js is sending you) rather than real threads or processes.
    Given the single-threaded constraint, we could provide similar safety guarantees this in simpler and more efficient
    ways, e.g. by having a simple queue of functions that access the shared state.
-2. Processors have instructions for atomic you can use that would let you implement alternate algorithms that should be
-   much more efficient.
+2. Processors have instructions for atomic access that you can use to implement alternate algorithms that should be much
+   more efficient.
 3. While this has been tested and works, concurrency is hard and it's very possible there are bugs I haven't found.
 4. Other languages and libraries offer better tested, more performant, and more versatile concurrency primitives.
 5. If you can avoid it, just don't share mutable data across threads. Handling that properly is slow and error-prone and
